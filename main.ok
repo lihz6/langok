@@ -1,0 +1,25 @@
+def Int int;
+
+// define a new struct Circle which embeds by _ with a int
+def Circle struct(_, X, Y int) {
+  // impl make(Circle)
+  make() Circle {
+    return Circle(1, 0, 0)
+  }
+}
+
+fun (self Circle) {
+  // impl self + p
+  add(p Circle) Circle {
+    return Circle(self._ + p._, self.X + p.X, self.Y + p.Y)
+  }
+}
+
+fun (self &mut Circle) {
+  // impl self += p
+  iadd(&p &Circle) {
+    self._ += p._
+    self.X += p.X
+    self.Y += p.Y
+  }
+}
